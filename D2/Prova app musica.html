@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione - Music Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, input, button {
+            display: block;
+            margin: 10px 0;
+        }
+        .checkbox-group, .radio-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registrati a Spotifazio</h2>
+        <form id="registrationForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" required>
+            
+            <label for="email">Indirizzo Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="data_nascita">Data di nascita:</label>
+            <input type="date" id="data_nascita" name="data_nascita" required>
+            
+            <label for="telefono">Numero di telefono:</label>
+            <input type="number" id="telefono" name="telefono" required>
+            
+            <div class="checkbox-group">
+                <p>Seleziona i tuoi generi musicali preferiti:</p>
+                <label><input type="checkbox" name="genere" value="rock"> Rock</label>
+                <label><input type="checkbox" name="genere" value="pop"> Pop</label>
+                <label><input type="checkbox" name="genere" value="jazz"> Jazz</label>
+                <label><input type="checkbox" name="genere" value="classica"> Classica</label>
+            </div>
+            
+            <div class="radio-group">
+                <p>Accetti i termini e condizioni?</p>
+                <label><input type="radio" name="termini" value="accetto" required> Accetto</label>
+            </div>
+            
+            <button type="submit">Invia registrazione</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Registrazione inviata!");
+        });
+    </script>
+</body>
+</html>
